@@ -1,0 +1,16 @@
+/* Enlarged layout; reports.py applies 0.75 zoom to produce Letter paper. */
+@page {
+    size: 816pt 1056pt;
+    margin: 0 33.6pt;
+}
+
+body {
+    font-size: 10pt;
+    line-height: 1;
+}
+
+/* Keep tiny filing spacer spans from creating extra pages. */
+div:has(> span:only-child[style*="font-size:1pt"]),
+div:has(> span:only-child[style*="font-size:2pt"]) {
+    line-height: 0;
+}
